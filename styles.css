@@ -1,0 +1,869 @@
+:root{
+  --blue:#009fe3;
+  --cyan:#00b8e9;
+  --navy:#0d3550;
+  --green:#78be20;
+  --orange:#f59b23;
+  --pink:#e94f95;
+  --yellow:#ffd400;
+  --violet:#7258b8;
+  --ink:#1c2d36;
+  --muted:#6d7a80;
+  --line:#d7e1e6;
+  --paper:#ffffff;
+  --content:1320px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#fff;
+  color:var(--ink);
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.45;
+}
+
+h1,h2,h3,.events-title,.athletics-title,.parents-word{
+  font-family:"Archivo Black",Arial,sans-serif;
+}
+
+a{color:inherit}
+.container-xxl{max-width:var(--content)}
+
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:0;
+}
+.skip-link:focus{
+  left:0;
+  z-index:9999;
+  padding:.75rem 1rem;
+  background:#fff;
+}
+
+/* HEADER */
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.header-row{
+  height:88px;
+  display:grid;
+  grid-template-columns:330px 1fr auto;
+  gap:28px;
+  align-items:center;
+}
+.brand{
+  display:flex;
+  align-items:center;
+}
+.brand img{
+  width:310px;
+  display:block;
+}
+.main-nav{
+  height:88px;
+  justify-content:flex-end;
+  align-items:stretch;
+}
+.main-nav a{
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:0 12px;
+  color:#24343d;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+}
+.main-nav a.active,
+.main-nav a:hover{
+  color:var(--blue);
+}
+.main-nav a.active::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:0;
+  height:5px;
+  background:var(--blue);
+}
+.header-tools{
+  display:flex;
+  gap:8px;
+}
+.icon-btn{
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--navy);
+}
+.search-panel{
+  padding:14px 0;
+  border-top:1px solid var(--line);
+  background:#f4f8fa;
+}
+.site-search{
+  display:grid;
+  grid-template-columns:150px 1fr 100px;
+  align-items:center;
+  gap:10px;
+}
+.site-search label{
+  font-size:12px;
+  font-weight:700;
+}
+.site-search input,
+.site-search button{
+  height:42px;
+  border-radius:0;
+}
+.site-search input{
+  border:1px solid #bdcad0;
+  padding:0 12px;
+}
+.site-search button{
+  border:0;
+  background:var(--navy);
+  color:#fff;
+  font-weight:800;
+}
+.mobile-nav{
+  display:flex;
+  flex-direction:column;
+}
+.mobile-nav a{
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:610px;
+  overflow:hidden;
+  background:#c9e9f6;
+}
+.hero-photo{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(13,53,80,.63), rgba(13,53,80,.16) 48%, rgba(13,53,80,0) 72%),
+    url("https://www.benesovka.cz/sites/default/files/2_0.jpg") center 43%/cover no-repeat;
+}
+.hero-590{
+  position:absolute;
+  right:-35px;
+  bottom:-62px;
+  color:rgba(255,255,255,.18);
+  font-family:"Archivo Black",Arial,sans-serif;
+  font-size:320px;
+  line-height:.8;
+  letter-spacing:-.08em;
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;
+  height:610px;
+  display:flex;
+  align-items:center;
+}
+.hero-title-box{
+  width:575px;
+  padding:45px 48px 42px;
+  background:#fff;
+  border-left:14px solid var(--blue);
+}
+.hero-title-box h1{
+  margin:0;
+  color:var(--navy);
+  font-size:48px;
+  line-height:1;
+  letter-spacing:-.025em;
+}
+.hero-title-box>strong{
+  display:block;
+  margin-top:12px;
+  color:var(--blue);
+  font-size:23px;
+}
+.hero-title-box p{
+  max-width:470px;
+  margin:20px 0 0;
+  color:#52626b;
+  font-size:14px;
+  font-weight:600;
+}
+.hero-buttons{
+  display:flex;
+  gap:25px;
+  margin-top:26px;
+}
+.hero-buttons a{
+  color:var(--navy);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  padding-bottom:4px;
+  border-bottom:3px solid var(--yellow);
+}
+
+/* RIBBON */
+.task-ribbon{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+}
+.task-ribbon a{
+  min-height:104px;
+  display:flex;
+  gap:15px;
+  align-items:center;
+  justify-content:center;
+  padding:0 18px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:800;
+  font-size:14px;
+}
+.task-ribbon i{
+  font-size:23px;
+}
+.ribbon-blue{background:var(--blue)}
+.ribbon-green{background:var(--green)}
+.ribbon-orange{background:var(--orange)}
+.ribbon-pink{background:var(--pink)}
+.ribbon-violet{background:var(--violet)}
+.ribbon-navy{background:var(--navy)}
+.task-ribbon a:hover{
+  filter:brightness(.93);
+}
+
+/* WALL */
+.school-wall{
+  padding:78px 0 88px;
+  background:#fff;
+}
+.wall-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:28px;
+}
+.wall-title h2{
+  margin:0;
+  font-size:36px;
+}
+.wall-title>a{
+  color:var(--navy);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+}
+.wall-grid{
+  display:grid;
+  grid-template-columns:1.35fr .75fr .75fr .95fr;
+  grid-template-rows:1fr;
+  gap:18px;
+  align-items:stretch;
+}
+.story{
+  overflow:hidden;
+}
+.story-main{
+  background:#f5f8fa;
+}
+.story-small{
+  display:flex;
+  flex-direction:column;
+  color:#fff;
+}
+.story-blue{background:var(--blue)}
+.story-pink{background:var(--pink)}
+.story-photo{
+  background-size:cover;
+  background-position:center;
+}
+.story-main .story-photo{
+  height:290px;
+}
+.story-small .story-photo{
+  height:235px;
+}
+.story-england{
+  background-image:url("https://www.benesovka.cz/sites/default/files/imagecache/thumbnails/20250614_101416_1.jpg");
+}
+.story-bludiste{
+  background-image:url("https://www.benesovka.cz/sites/default/files/imagecache/thumbnails/shared%20image%20%285%29_6.jpg");
+}
+.story-firstday{
+  background-image:url("https://www.benesovka.cz/sites/default/files/imagecache/thumbnails/IMG_20260901_080203.jpg");
+}
+.story-copy{
+  padding:22px;
+}
+.story-copy time{
+  color:var(--orange);
+  font-size:10px;
+  font-weight:800;
+}
+.story-small .story-copy time{
+  color:#fff;
+  opacity:.85;
+}
+.story-copy h3{
+  margin:7px 0 10px;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:800;
+}
+.story-small .story-copy h3{
+  font-size:18px;
+}
+.story-copy h3 a{
+  color:inherit;
+  text-decoration:none;
+}
+.story-copy p{
+  margin:0;
+  color:#60717a;
+  font-size:12px;
+}
+.read-more{
+  display:inline-flex;
+  gap:8px;
+  margin-top:17px;
+  color:var(--navy);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+}
+.events-panel{
+  padding:26px;
+  background:var(--yellow);
+  color:#302b1b;
+}
+.events-title{
+  margin-bottom:15px;
+  font-size:24px;
+}
+.event-row{
+  min-height:90px;
+  display:grid;
+  grid-template-columns:58px 1fr;
+  gap:14px;
+  align-items:center;
+  border-top:1px solid rgba(48,43,27,.23);
+  text-decoration:none;
+}
+.event-row time{
+  text-align:center;
+}
+.event-row time strong{
+  display:block;
+  font-size:28px;
+  line-height:1;
+}
+.event-row time span{
+  font-size:9px;
+  font-weight:800;
+}
+.event-row>span{
+  font-size:12px;
+  font-weight:700;
+}
+.events-all{
+  display:inline-flex;
+  gap:8px;
+  margin-top:16px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* PARENTS */
+.parents{
+  position:relative;
+  overflow:hidden;
+  padding:84px 0;
+  background:var(--navy);
+  color:#fff;
+}
+.parents-word{
+  position:absolute;
+  right:-22px;
+  top:-35px;
+  color:rgba(255,255,255,.055);
+  font-size:180px;
+  letter-spacing:-.05em;
+  line-height:1;
+  pointer-events:none;
+}
+.parents-inner{
+  position:relative;
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:66px;
+}
+.parents-side h2{
+  margin:0;
+  font-size:40px;
+  line-height:1.02;
+}
+.parents-links{
+  display:grid;
+  gap:14px;
+}
+.parent-band{
+  display:grid;
+  grid-template-columns:220px 1fr 1fr 1fr 1fr;
+  align-items:center;
+  min-height:78px;
+  padding:0 22px;
+  color:#17252d;
+}
+.parent-band h3{
+  margin:0;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+  font-weight:900;
+}
+.parent-band a{
+  display:flex;
+  align-items:center;
+  min-height:44px;
+  padding:0 16px;
+  border-left:1px solid rgba(23,37,45,.22);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:700;
+}
+.band-yellow{background:var(--yellow)}
+.band-cyan{background:var(--cyan);color:#fff}
+.band-cyan a{border-color:rgba(255,255,255,.3)}
+.band-green{background:var(--green)}
+
+/* ATHLETICS */
+.athletics{
+  min-height:545px;
+  display:grid;
+  grid-template-columns:58% 42%;
+}
+.athletics-photo{
+  min-height:545px;
+  background:
+    linear-gradient(rgba(13,53,80,.04),rgba(13,53,80,.04)),
+    url("https://www.benesovka.cz/sites/default/files/5_0.jpg") center/cover no-repeat;
+}
+.athletics-block{
+  position:relative;
+  overflow:hidden;
+  background:var(--green);
+}
+.track-lines{
+  position:absolute;
+  inset:auto -110px -110px auto;
+  width:420px;
+  height:420px;
+  border:22px solid rgba(255,255,255,.24);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 22px transparent,
+    0 0 0 44px rgba(255,255,255,.16),
+    0 0 0 66px transparent,
+    0 0 0 88px rgba(255,255,255,.10);
+}
+.athletics-copy{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:58px 70px;
+}
+.athletics-title{
+  color:rgba(255,255,255,.28);
+  font-size:64px;
+  line-height:.9;
+  letter-spacing:-.04em;
+}
+.athletics-copy h2{
+  margin:10px 0 15px;
+  color:#173112;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:30px;
+  font-weight:900;
+}
+.athletics-copy p{
+  max-width:480px;
+  color:#2d5423;
+  font-weight:600;
+}
+.athletics-links{
+  margin-top:24px;
+  border-top:2px solid rgba(23,49,18,.3);
+}
+.athletics-links a{
+  min-height:54px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(23,49,18,.28);
+  color:#173112;
+  text-decoration:none;
+  font-weight:800;
+}
+
+/* SCHOOL MAP */
+.school-map{
+  padding:82px 0;
+  background:#fff;
+}
+.school-map-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:70px;
+  align-items:center;
+}
+.school-photo{
+  min-height:470px;
+  background:
+    url("https://www.benesovka.cz/sites/default/files/imagecache/left_image/fotogalerie/%5Bnid%5D/Obr%C3%A1zek4.jpg") center/cover no-repeat;
+}
+.school-details{
+  position:relative;
+}
+.school-number{
+  position:absolute;
+  right:0;
+  top:-46px;
+  color:#eef3f5;
+  font-family:"Archivo Black",Arial,sans-serif;
+  font-size:130px;
+  line-height:1;
+  z-index:0;
+}
+.school-details h2{
+  position:relative;
+  z-index:1;
+  margin:0 0 26px;
+  color:var(--navy);
+  font-family:"Inter",Arial,sans-serif;
+  font-size:31px;
+  line-height:1.18;
+  font-weight:900;
+}
+.school-details dl{
+  position:relative;
+  z-index:1;
+  margin:0;
+  border-top:1px solid var(--line);
+}
+.school-details dl>div{
+  min-height:46px;
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:18px;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+}
+.school-details dt{
+  color:var(--muted);
+  font-size:11px;
+}
+.school-details dd{
+  margin:0;
+  font-size:13px;
+  font-weight:700;
+}
+.school-actions{
+  display:flex;
+  gap:22px;
+  margin-top:22px;
+}
+.school-actions a{
+  color:var(--blue);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+}
+
+/* LOWER NAV */
+.lower-nav{
+  padding:55px 0 62px;
+  background:#f4f7f8;
+}
+.lower-nav-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:56px;
+}
+.lower-nav h3{
+  margin:0 0 12px;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:18px;
+  font-weight:900;
+}
+.lower-nav a{
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  border-top:1px solid var(--line);
+  color:#304049;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:700;
+}
+.lower-nav a:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+/* FOOTER */
+.site-footer{
+  background:var(--navy);
+  color:#fff;
+}
+.footer-colorbar{
+  height:8px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.footer-colorbar span:nth-child(1){background:var(--blue)}
+.footer-colorbar span:nth-child(2){background:var(--green)}
+.footer-colorbar span:nth-child(3){background:var(--orange)}
+.footer-colorbar span:nth-child(4){background:var(--pink)}
+.footer-grid{
+  min-height:145px;
+  display:grid;
+  grid-template-columns:340px 1fr 1fr 1fr;
+  gap:38px;
+  padding-top:34px;
+}
+.footer-brand img{
+  width:295px;
+  filter:brightness(0) invert(1);
+}
+.footer-grid>div:not(.footer-brand){
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.footer-grid strong{
+  margin-bottom:3px;
+  font-size:12px;
+}
+.footer-grid span,
+.footer-grid a{
+  color:#fff;
+  text-decoration:none;
+  font-size:11px;
+}
+.footer-bottom{
+  padding:12px 0 16px;
+  border-top:1px solid rgba(255,255,255,.2);
+  color:#cddbe2;
+  font-size:10px;
+}
+
+.toast{border-radius:0}
+
+/* RESPONSIVE */
+@media (max-width:1199.98px){
+  :root{--content:1080px}
+  .header-row{
+    grid-template-columns:290px 1fr auto;
+  }
+  .brand img{width:270px}
+  .wall-grid{
+    grid-template-columns:1.3fr .7fr .7fr;
+  }
+  .events-panel{
+    grid-column:1/-1;
+  }
+  .events-panel{
+    display:grid;
+    grid-template-columns:200px repeat(3,1fr) 160px;
+    align-items:center;
+    gap:0 15px;
+  }
+  .events-title{margin:0}
+  .event-row{
+    border-top:0;
+    border-left:1px solid rgba(48,43,27,.23);
+    padding-left:15px;
+  }
+  .events-all{margin:0}
+  .parents-inner{
+    grid-template-columns:220px 1fr;
+    gap:40px;
+  }
+  .parent-band{
+    grid-template-columns:180px repeat(4,1fr);
+  }
+}
+
+@media (max-width:991.98px){
+  .hero{
+    height:560px;
+  }
+  .hero-inner{
+    height:560px;
+  }
+  .hero-title-box{
+    width:520px;
+  }
+  .task-ribbon{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .wall-grid{
+    grid-template-columns:1fr 1fr;
+  }
+  .story-main{
+    grid-column:1/-1;
+  }
+  .events-panel{
+    grid-column:1/-1;
+    display:block;
+  }
+  .event-row{
+    border-left:0;
+    border-top:1px solid rgba(48,43,27,.23);
+    padding-left:0;
+  }
+  .parents-inner{
+    grid-template-columns:1fr;
+  }
+  .parent-band{
+    grid-template-columns:1fr 1fr;
+    padding:18px 22px;
+  }
+  .parent-band h3{
+    grid-column:1/-1;
+    margin-bottom:8px;
+  }
+  .parent-band a{
+    border-left:0;
+    border-top:1px solid rgba(23,37,45,.2);
+    padding:0 8px 0 0;
+  }
+  .athletics{
+    grid-template-columns:1fr;
+  }
+  .athletics-photo{
+    min-height:360px;
+  }
+  .school-map-grid{
+    grid-template-columns:1fr;
+  }
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media (max-width:767.98px){
+  body{font-size:15px}
+  .header-row{
+    height:70px;
+    grid-template-columns:1fr auto;
+  }
+  .brand img{width:225px}
+  .search-toggle{display:none}
+
+  .hero,
+  .hero-inner{
+    height:600px;
+  }
+  .hero-photo{
+    background-position:57% 43%;
+  }
+  .hero-title-box{
+    width:100%;
+    padding:30px 28px;
+    align-self:flex-end;
+    margin-bottom:24px;
+  }
+  .hero-title-box h1{
+    font-size:37px;
+  }
+  .hero-590{
+    display:none;
+  }
+
+  .task-ribbon{
+    grid-template-columns:1fr 1fr;
+  }
+  .task-ribbon a{
+    min-height:82px;
+  }
+
+  .school-wall{
+    padding:52px 0 58px;
+  }
+  .wall-title{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:7px;
+  }
+  .wall-grid{
+    grid-template-columns:1fr;
+  }
+  .story-main{
+    grid-column:auto;
+  }
+
+  .parents{
+    padding:55px 0;
+  }
+  .parents-word{
+    font-size:100px;
+  }
+  .parents-side h2{
+    font-size:32px;
+  }
+  .parent-band{
+    grid-template-columns:1fr;
+  }
+
+  .athletics-photo{
+    min-height:270px;
+  }
+  .athletics-copy{
+    padding:45px 24px;
+  }
+  .athletics-title{
+    font-size:48px;
+  }
+
+  .school-map{
+    padding:55px 0;
+  }
+  .school-photo{
+    min-height:320px;
+  }
+  .school-number{
+    font-size:90px;
+  }
+  .school-details dl>div{
+    grid-template-columns:1fr;
+    gap:2px;
+    padding:8px 0;
+  }
+  .school-actions{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .lower-nav-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
